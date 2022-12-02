@@ -1,5 +1,7 @@
+PROJECT_BASE = $(shell pwd)
+
 all:
-	g++ main.cpp PasswordValidator.cpp -o main.o
+	g++ lib/main.cpp lib/PasswordValidator.cpp -I$(PROJECT_BASE)/include/ -o main.o
 
 clean :
 	rm main.o
